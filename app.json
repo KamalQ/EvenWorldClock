@@ -1,0 +1,15 @@
+{
+  "package_id": "com.icedgrapefruit.worldclock",
+  "edition": "202601",
+  "name": "Even World Clock",
+  "version": "0.1.0",
+  "min_app_version": "0.1.0",
+  "tagline": "World Clock for G2 glasses",
+  "description": "View multiple timezone clocks on your G2 glasses. Add cities, see live times and offsets from your local time.",
+  "author": "IcedGrapeFruit",
+  "entrypoint": "index.html",
+  "permissions": {
+    "network": [],
+    "fs": []
+  }
+}

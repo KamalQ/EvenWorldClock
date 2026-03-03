@@ -1,0 +1,23 @@
+{
+  "name": "world-clock",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@evenrealities/even_hub_sdk": "^0.0.7",
+    "@jappyjan/even-better-sdk": "^0.0.8",
+    "@jappyjan/even-realities-ui": "^0.0.8",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "suncalc": "^1.9.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.21"
+  }
+}

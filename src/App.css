@@ -1,0 +1,222 @@
+:root {
+  --tc-highlight: #FFFFFF;
+  --tc-1st: #232323;
+  --tc-2nd: #7B7B7B;
+  --tc-red: #FF453A;
+  --tc-green: #4BB956;
+  --bc-highlight: #232323;
+  --bc-1st: #FFFFFF;
+  --bc-2nd: #F6F6F6;
+  --bc-3rd: #EEEEEE;
+  --bc-4th: #E4E4E4;
+  --bc-accent: #FEF991;
+  --sc-1st: rgba(0, 0, 0, 0.5);
+  --sc-2nd: rgba(35, 35, 35, 0.08);
+  --radius: 6px;
+  --margin: 12px;
+  --card-padding: 16px;
+}
+
+#app-container {
+  max-width: 393px;
+  margin: 0 auto;
+  padding: var(--margin);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* World Clock city row */
+.city-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.city-info { flex: 1; min-width: 0; }
+.city-time { flex-shrink: 0; }
+
+/* Icon button */
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  color: var(--tc-2nd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  -webkit-tap-highlight-color: transparent;
+}
+.icon-btn:active { opacity: 0.7; }
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--sc-1st);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: var(--card-padding);
+}
+
+.modal-card {
+  background: var(--bc-1st);
+  border-radius: var(--radius);
+  padding: 20px;
+  width: 100%;
+  max-width: 360px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--sc-2nd);
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: -0.15px;
+  outline: none;
+  box-sizing: border-box;
+}
+.search-input::placeholder { color: var(--tc-2nd); }
+
+.city-list {
+  overflow-y: auto;
+  max-height: 300px;
+  margin-top: 8px;
+}
+
+.city-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: none;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.15px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--bc-2nd);
+  text-align: left;
+}
+.city-option:active { background: var(--bc-2nd); }
+
+.city-country {
+  color: var(--tc-2nd);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.13px;
+}
+
+/* Reorder buttons */
+.reorder-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.reorder-btn {
+  background: var(--sc-2nd);
+  border: none;
+  width: 28px;
+  height: 22px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--tc-1st);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.reorder-btn:active { opacity: 0.7; }
+.reorder-btn:disabled { opacity: 0.25; cursor: default; }
+
+/* Featured badge */
+.featured-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: -0.11px;
+  color: var(--tc-1st);
+  background: var(--bc-accent);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+/* Toggle row */
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Toggle switch */
+.toggle {
+  width: 44px;
+  height: 26px;
+  border-radius: 13px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.toggle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--tc-highlight);
+  transition: left 0.2s;
+}
+
+.toggle.on { background: var(--bc-highlight); }
+.toggle.on::after { left: 21px; }
+.toggle.off { background: var(--bc-4th); }
+.toggle.off::after { left: 3px; }
+
+/* Glasses panel */
+.glasses-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Event log */
+.event-log {
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: -0.11px;
+  color: var(--tc-2nd);
+  background: var(--sc-2nd);
+  border-radius: 4px;
+  padding: 8px;
+  max-height: 160px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin: 0;
+}
